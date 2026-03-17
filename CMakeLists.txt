@@ -10,3 +10,5 @@ add_executable(ID_Finder main.cpp)
 if (OpenMP_CXX_FOUND)
     target_link_libraries(ID_Finder PUBLIC OpenMP::OpenMP_CXX)
 endif ()
+
+target_compile_options(ID_Finder PRIVATE -O3 -mavx2)
